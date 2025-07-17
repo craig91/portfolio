@@ -1,0 +1,38 @@
+# Node modules
+backend/node_modules/
+frontend/node_modules/
+
+# Vite build output
+frontend/dist/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*  # e.g., .env.development
+
+# IDE/editor junk
+.vscode/
+.idea/
+*.swp
+
+# Local build or temp files
+*.local
+*.tmp
+*.temp
+
+# Optional: system crash logs
+*.pid
+*.seed
+*.pid.lock
+
+# Mac/Linux hidden files
+._*
