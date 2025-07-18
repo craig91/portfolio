@@ -1,14 +1,16 @@
 import experience from "../data/experience";
 function Experience() {
     return (
-        <div>
+        <section>
             <h2>Experience</h2>
             {experience.map((job, index) =>(
-                <div key={index}>
-                    <h3>{job.company}</h3>
-                    <p><strong>Role:</strong>{job.role}</p>
-                    <p><strong>Location:</strong>{job.location}</p>
-                    <p><strong>Duration:</strong>{job.duration}</p>
+                <article key={index}>
+                    <header>
+                    <h3>{job.role}</h3>
+                    <p>
+                        <strong>{job.company}</strong> &middot; {job.duration}
+                    </p>
+                    </header>
                     {job.details.length > 0 && (
                         <ul>
                             {job.details.map((point, i) => (
@@ -16,9 +18,9 @@ function Experience() {
                             ))}
                         </ul>
                     )}
-                    </div>
+                    </article>
             ))}
-        </div>
+        </section>
     );
 }
 
