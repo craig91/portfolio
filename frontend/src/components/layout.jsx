@@ -3,18 +3,18 @@ import { Link, Outlet } from 'react-router-dom';
 function Layout() {
     return (
         <div>
+            <header>
             <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/bio">Bio</Link></li>
-                    <li><Link to="/experience">Experience</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
-                    <li><Link to={"/blog"}>Blog</Link></li>
-
-                </ul>
+                <Link to="/">Home</Link>
+                <Link to="/bio">Bio</Link>
+                <Link to="/experience">Experience</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/blog">Blog</Link>
             </nav>
-            <hr />
-            <Outlet />
+            </header>
+            <main>
+                <Outlet />
+            </main>
         </div>
     );
 }
