@@ -2,7 +2,7 @@
 
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Fira Code', monospace;
   line-height: 1.5;
   font-weight: 400;
 
@@ -31,7 +31,14 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* font-family: 'Fira Code', monospace; */
 }
+
+nav a:hover {
+  color: #8be9fd;
+  transition: color 0.2s ease;
+}
+
 
 h1 {
   font-size: 3.2em;
