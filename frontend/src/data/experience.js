@@ -1,5 +1,11 @@
 const experience = [
   {
+    company: "Amazon AWS",
+    role: "Data Center Technician",
+    location: "Japan",
+    duration: "2025 - Present"
+  },
+  {
     company: "Weill Cornell Medicine",
     role: "IT Support Analyst II",
     location: "New York",
