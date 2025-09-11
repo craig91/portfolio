@@ -6,18 +6,9 @@ function Experience() {
             {experience.map((job, index) =>(
                 <article key={index}>
                     <header>
-                    <h3>{job.role}</h3>
-                    <p>
-                        <strong>{job.company}</strong> &middot; {job.duration}
-                    </p>
+                    <h3>{job.theme}</h3>
                     </header>
-                    {job.details.length > 0 && (
-                        <ul>
-                            {job.details.map((point, i) => (
-                                <li key={i}>{point}</li>
-                            ))}
-                        </ul>
-                    )}
+                    <p>{job.content}</p>
                     </article>
             ))}
         </section>
