@@ -1,0 +1,19 @@
+-- CREATE DATABASE IF NOT EXISTS portfolio CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+--        USE portfolio;
+--
+-- CREATE TABLE IF NOT EXISTS media(
+--     id          BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+--     uuid        CHAR(36) NOT NULL UNIQUE,
+--     title       VARCHAR(255),
+--     alt_text    VARCHAR(255),
+--     mime_type   VARCHAR(100) NOT NULL,
+--     width_px    INT,
+--     height_px   INT,
+--     size_bytes  BIGINT,
+--     storage_key VARCHAR(512) NOT NULL,
+--     public_url  VARCHAR(1024),
+--     create_at   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- )
+--
+-- CREATE INDEX idx_media_created_at ON media (created_at);
+
