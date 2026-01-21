@@ -10,7 +10,7 @@ const blogPosts = [
       },
       {
         type: "img",
-        src: "/blog/building-a-virtual-soc-lab/wazuh-discover.png",
+        src: "",
         alt: "Wazuh dashboard showing agent status",
         caption: "Wazuh manager dashboard after onboarding agents.",
       },
