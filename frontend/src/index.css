@@ -401,3 +401,75 @@ p { margin: 0; color: var(--muted); }
   border: 1px solid rgba(79, 209, 197, 0.55);
   background: rgba(79, 209, 197, 0.18);
 }
+
+.figure {
+  margin: 16px 0 22px;
+}
+
+.figure img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.figure figcaption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--subtle);
+}
+
+
+/* ---------- Projects extras ---------- */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.btn-filter {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-filter-active {
+  border-color: rgba(79, 209, 197, 0.55);
+  background: rgba(79, 209, 197, 0.10);
+}
+
+.meta-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+}
+
+.pill-accent {
+  border-color: rgba(79, 209, 197, 0.35);
+  background: rgba(79, 209, 197, 0.12);
+  color: var(--text);
+}
+
+.list {
+  margin: 12px 0 0 18px;
+  color: var(--muted);
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}

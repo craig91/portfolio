@@ -1,16 +1,21 @@
 const projects = [
   {
-    title: "SOC Lab",
-    description: `Built a virtualized home lab simulating a Security Operations Center (SOC) environment to develop hands-on skills in threat detection, log analysis, and network defense.`,
-    tools: ["Wazuh", "Suricata", "UDM Pro", "Bind9", "MITRE ATT&CK", "ELK Stack"],
-    link: null
+    title: "Virtual SOC Lab",
+    description:
+      "Built a home SOC-style environment to practice log ingestion, detection, and alerting workflows.",
+    tools: ["Wazuh", "Suricata", "Ubuntu", "Sysmon"],
+    type: "Security Lab",
+    status: "Live",
+    outcomes: [
+      "Forwarded IDS + host logs into Wazuh",
+      "Validated alerting on suspicious inbound traffic",
+      "Documented setup + troubleshooting steps",
+    ],
+    links: {
+      caseStudy: "/blog/building-a-virtual-soc-lab", // internal link
+      repo: "https://github.com/your-repo", // optional
+    },
   },
-  {
-    title: "Hip Hop Hacktivism",
-    description: `Taught programming at a 24-hour hackathon for underserved NYC public school students in 2017.`,
-    tools: ["HTML", "JavaScript", "Mentorship"],
-    link: null
-  }
 ];
 
 export default projects;

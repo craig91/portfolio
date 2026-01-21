@@ -1,20 +1,30 @@
 const blogPosts = [
   {
-    title: "Why I Built a SOC Lab at Home",
-    date: "2024-09-14",
-    content: `
-I created a virtual SOC lab to deepen my skills in cybersecurity. It included Wazuh for endpoint monitoring, Suricata for IDS, and a simulated DNS setup using Bind9.
-
-The lab helped me map attacks with MITRE ATT&CK and gain practical experience with alert correlation and response workflows.
-    `
+    slug: "building-a-virtual-soc-lab",
+    title: "Building a Virtual SOC Lab",
+    date: "2025-12-01",
+    blocks: [
+      {
+        type: "p",
+        text: "This post documents how I built a virtual SOC lab using Wazuh and Suricata.",
+      },
+      {
+        type: "img",
+        src: "/blog/building-a-virtual-soc-lab/wazuh-discover.png",
+        alt: "Wazuh dashboard showing agent status",
+        caption: "Wazuh manager dashboard after onboarding agents.",
+      },
+      {
+        type: "p",
+        text: "Once the agents were connected, I configured Suricata to generate alerts and forward logs.",
+      },
+      {
+        type: "code",
+        lang: "bash",
+        code: "sudo tail -f /var/log/suricata/fast.log",
+      },
+    ],
   },
-  {
-    title: "Teaching at Hip Hop Hacktivism",
-    date: "2017-06-10",
-    content: `
-In 2017, I taught programming to NYC public school students during a 24-hour hackathon. It was one of the most fulfilling things I’ve done — showing real-world impact from code.
-    `
-  }
 ];
 
 export default blogPosts;

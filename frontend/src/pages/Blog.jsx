@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import blogPosts from "../data/blog";
 
 function Blog() {
@@ -20,10 +21,13 @@ function Blog() {
             day: "2-digit",
           });
 
+          const firstParagraph =
+            post.blocks?.find((b) => b.type === "p")?.text ?? "";
+
           const preview =
-            post.content?.trim().length > 220
-              ? post.content.trim().slice(0, 220) + "…"
-              : post.content?.trim();
+            firstParagraph.length > 220
+              ? firstParagraph.slice(0, 220) + "…"
+              : firstParagraph;
 
           return (
             <article key={index} className="card">
@@ -32,13 +36,12 @@ function Blog() {
                 <span className="card-meta">{date}</span>
               </div>
 
-              <p className="clamp-3">{post.content.trim()}</p>
+              <p>{preview}</p>
 
-              {/* Optional: keep this even before you build full post pages */}
               <div className="hero-actions" style={{ marginTop: 14 }}>
-                <button className="btn" type="button">
+                <Link className="btn" to={`/blog/${post.slug}`}>
                   Read more →
-                </button>
+                </Link>
               </div>
             </article>
           );
@@ -49,3 +52,4 @@ function Blog() {
 }
 
 export default Blog;
+

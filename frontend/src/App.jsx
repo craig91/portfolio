@@ -5,6 +5,7 @@ import Bio from './pages/Bio';
 import Experience from "./pages/Experience";
 import Projects from './pages/Projects';
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
           <Route path="bio" element={<Bio />} />
           <Route path="experience" element={<Experience />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="blog" element={<Blog />} ></Route>
+          <Route path="blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost /> } />
 
         </Route>
       </Routes>
