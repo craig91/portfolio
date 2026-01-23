@@ -80,13 +80,54 @@ const blogPosts = [
         text: "This file basically states 'When I need DNS answers, ask this server'"
       },
       {
+        type: "p",
+        text: "Once the resolver receives the question (the search), it then acts like a client and checks the DNS hierarchy to find the answer:"
+      },
+      {
         type: "ol",
         items: [
-          "test1",
-          "test2",
-          "test3"
+          "Root DNS servers - 'Where do I find the .com,.net,.org etc.. servers?'",
+          "TLD DNS servers - 'Who is authoritative for facebook.com?'",
+          "Authoritative DNS Servers - 'Here is the actual answer'"
         ],
       },
+      {
+        type: "p",
+        text: "Only the authoritative DNS server holds the real DNS records (like A / AAAA / CNAME, etc.) and returns to you the final IP address."
+      },
+      {
+        type: "h1",
+        text: "DNS record types you need to know"
+      },
+      {
+        type: "p",
+        text: "DNS records live inside a zone which is a collection of DNS entries for a domain. Each record answers a specific question like:"
+      },
+      {
+        type: "ul",
+        items: [
+          "What IP address is this name?",
+          "What name should this alias point to",
+          "Which server is authoritative for this domain?"
+        ]
+      },
+      {
+        type: "h1",
+        text: "A Record (IPv4 Address Record)"
+      },
+      {
+        type: "h3",
+        text: "Example:"
+      },
+      {
+        type: "code",
+        lang: "bash",
+        code: "app.mywebsite.com.           IN      A     10.0.0.75"
+      },
+      {
+        type: "p",
+        text: "app.mywebsite.com resolves to the IPv4 address 10.0.0.75"
+      }
     ],
   },
 ];
