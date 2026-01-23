@@ -53,7 +53,7 @@ function BlogPost() {
             return (
               <ol key={i}>
                 {block.items.map((item, idx) => (
-                  <li key={i}>{item}</li>
+                  <li key={idx}>{item}</li>
                 ))}
               </ol>
             );
@@ -63,7 +63,7 @@ function BlogPost() {
             return (
               <ul key={i}>
                 {block.items.map((item, idx) => (
-                  <li key={i}>{item}</li>
+                  <li key={idx}>{item}</li>
                 ))}
               </ul>
             );
@@ -83,8 +83,27 @@ function BlogPost() {
             return (
               <blockquote key={i} className="quote">
                 <p>{block.text}</p>
-                {block.cite && <cite>- {block.cite} </cite>}
+                {block.cite && <cite>— {block.cite} </cite>}
               </blockquote>
+            );
+          }
+
+          if (block.type == "callout") {
+            return (
+              <div key={i} className={`callout callout-${block.variant || "info"}`}>
+                {block.title && <strong>{block.title}</strong>}
+                <p>{block.text}</p>
+              </div>
+            );
+          }
+
+          if (block.type === "link") {
+            return (
+              <p key={i}>
+                <a href={block.href} target="_blank" rel="noreferrer">
+                  {block.label || block.href}
+                </a>
+              </p>
             );
           }
 
