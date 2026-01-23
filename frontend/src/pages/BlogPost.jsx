@@ -33,10 +33,10 @@ function BlogPost() {
 
       <div className="prose">
         {post.blocks.map((block, i) => {
-          if (block.type === "p") {
-            return <p key={i}>{block.text}</p>;
-          }
-
+          if (block.type === "p") { return <p key={i}>{block.text}</p>; }
+          if (block.type === "h1") { return <h1 key={i}>{block.text}</h1> }
+          if (block.type === "h2") { return <h2 key={i}>{block.text}</h2> }
+          if (block.type === "h3") { return <h3 key={i}>{block.text}</h3> }
           if (block.type === "img") {
             return (
               <figure key={i} className="figure">
@@ -49,12 +49,42 @@ function BlogPost() {
               </figure>
             );
           }
+          if (block.type === "ol") {
+            return (
+              <ol key={i}>
+                {block.items.map((item, idx) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ol>
+            );
+          }
+
+          if (block.type == "ul") {
+            return (
+              <ul key={i}>
+                {block.items.map((item, idx) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            );
+          }
 
           if (block.type === "code") {
             return (
               <pre key={i}>
                 <code>{block.code}</code>
               </pre>
+            );
+          }
+
+          if (block.type == "hr") { return <hr key={i} /> }
+
+          if (block.type == "quote") {
+            return (
+              <blockquote key={i} className="quote">
+                <p>{block.text}</p>
+                {block.cite && <cite>- {block.cite} </cite>}
+              </blockquote>
             );
           }
 
