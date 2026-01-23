@@ -473,3 +473,55 @@ p { margin: 0; color: var(--muted); }
   flex-wrap: wrap;
   margin-top: 14px;
 }
+
+.quote {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid rgba(79, 209, 197, 0.55);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.quote cite {
+  display: block;
+  margin-top: 8px;
+  color: var(--subtle);
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.callout {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.callout strong {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.callout p {
+  margin-top: 0;
+}
+
+.callout-tip {
+  border-color: rgba(79, 209, 197, 0.35);
+  background: rgba(79, 209, 197, 0.10);
+}
+
+.callout-warning {
+  border-color: rgba(251, 113, 133, 0.35);
+  background: rgba(251, 113, 133, 0.10);
+}
+
+.callout-info {
+  border-color: rgba(99, 179, 237, 0.35);
+  background: rgba(99, 179, 237, 0.10);
+}
+
+
